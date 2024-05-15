@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Casino {
 
     public static void main(String[] args) {
@@ -21,6 +22,12 @@ public class Casino {
         p.print();
         System.out.println(p.isPlayer);
 
+        Scanner scan = new Scanner(System.in);
+        System.out.println("What is your name?");
+        String userName = scan.nextLine();
+        System.out.println(userName);
+        p.name = userName;
+        p.print();
     }
 
 
@@ -70,4 +77,6 @@ public class Casino {
         dealer.hand[0] = deck[2];
         dealer.hand[1] = deck[3];
     }
+
+
 }
