@@ -16,6 +16,8 @@ public class Player {
         cardsValue = 0;
         name = "Finn";
         isPlayer = true;
+        hand = new Card[2];
+        numCards = 0;
 
     }
 

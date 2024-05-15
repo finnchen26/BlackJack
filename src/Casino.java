@@ -65,6 +65,8 @@ public class Casino {
 //        p.hand[0] = deck[0];
 //        p.hand[1] = deck[1];
 
+        p.addCard(deck[0]);
+        p.addCard(deck[1]);
         dealer.hand[0] = deck[2];
         dealer.hand[1] = deck[3];
     }
