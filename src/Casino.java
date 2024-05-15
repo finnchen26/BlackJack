@@ -1,9 +1,12 @@
 public class Casino {
+
     public static void main(String[] args) {
         Casino c = new Casino();
     }
 
     public Card[] deck;
+    public Player dealer;
+    public Player p;
 
     public Casino(){
         System.out.println("Welcome to Finn's Casino!");
@@ -11,9 +14,16 @@ public class Casino {
         makeDeck();
         shuffle();
         printDeck();
-
+        dealer = new Player();
+        p = new Player();
+        deal();
+        dealer.print();
+        p.print();
+        System.out.println(p.isPlayer);
 
     }
+
+
 
     public void makeDeck(){
         deck = new Card[52];
@@ -48,5 +58,14 @@ public class Casino {
         for (int i = 0; i < deck.length; i++){
             deck[i].print();
         }
+    }
+
+
+    public void deal(){
+//        p.hand[0] = deck[0];
+//        p.hand[1] = deck[1];
+
+        dealer.hand[0] = deck[2];
+        dealer.hand[1] = deck[3];
     }
 }
