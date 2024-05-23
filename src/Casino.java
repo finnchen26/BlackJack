@@ -7,6 +7,7 @@ public class Casino {
 
     public Card[] deck;
     public Player dealer;
+    public int numDealtcards;
     public Player p;
 
     public Casino(){
@@ -28,6 +29,34 @@ public class Casino {
         System.out.println(userName);
         p.name = userName;
         p.print();
+
+        String decision = "";
+        while (! decision.equals("stand") && p.cardsValue <= 21) {
+            System.out.println();
+            System.out.println("Do you want to stand or hit?");
+            decision = scan.nextLine();
+            System.out.println(decision);
+            boolean isHit;
+            if (decision.equals("hit")) {
+                isHit = true;
+                System.out.println("you have decided to hit");
+            } else {
+                isHit = false;
+                System.out.println("you have decided to stand");
+            }
+
+            if (isHit) {
+                //take a card from the deck, add it to something
+                //use add card to do this
+                //update value
+                p.addCard(deck[numDealtcards]);
+                numDealtcards++;
+                p.print();
+            } else {
+                //dealer plays (dealer hits until reach or surpass 17)
+                //use add card to do this
+            }
+        }
     }
 
 
@@ -74,8 +103,9 @@ public class Casino {
 
         p.addCard(deck[0]);
         p.addCard(deck[1]);
-        dealer.hand[0] = deck[2];
-        dealer.hand[1] = deck[3];
+        dealer.addCard(deck[2]);
+        dealer.addCard(deck[3]);
+        numDealtcards = 4;
     }
 
 
