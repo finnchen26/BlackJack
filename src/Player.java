@@ -10,6 +10,7 @@ public class Player {
     //choose to hit
     //choose to stay
 
+
     public int numCards;
 
     public Player(){
@@ -19,25 +20,26 @@ public class Player {
         hand = new Card[2];
         numCards = 0;
 
+
     }
 
     public void print(){
-        for(int i = 0; i < hand.length; i++){
-            hand[i].print();
-        }
+//        for(int i = 0; i < hand.length; i++){
+//            hand[i].print();
+//        }
         if(isPlayer){
             System.out.println("Hi! " + name);
             System.out.println("You have " + cardsValue + " points");
-
             for(int i = 0; i < hand.length; i++){
                 hand[i].print();
             }
         }
-        else{
+        else {
             System.out.println("Dealer info");
             System.out.println("the dealer has " + hand[0].value + " points");
             hand[0].print();
         }
+
 
 
 
