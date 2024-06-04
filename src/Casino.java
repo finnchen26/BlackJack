@@ -58,6 +58,7 @@ public class Casino {
                     //update value
                     p.addCard(deck[numDealtcards]);
                     numDealtcards++;
+                    System.out.println(p.hand.length);
                     p.print();
                     if (p.cardsValue > 21) {
                         System.out.println("Sorry, BUST!!!");
